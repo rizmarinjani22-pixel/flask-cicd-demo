@@ -26,8 +26,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask-cicd-demo:latestgit add .
+          tags: ${{ secrets.DOCKER_USERNAME }}/flask-cicd-demo:latest
